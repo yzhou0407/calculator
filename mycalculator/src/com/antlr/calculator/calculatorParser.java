@@ -20,7 +20,7 @@ public class calculatorParser extends Parser {
 		INT=1, DOUBLE=2, SCIENTIFIC_NUMBER=3, COS=4, SIN=5, TAN=6, ACOS=7, ASIN=8, 
 		ATAN=9, LN=10, LOG=11, SQRT=12, LPAREN=13, RPAREN=14, PLUS=15, MINUS=16, 
 		TIMES=17, DIV=18, GT=19, LT=20, EQ=21, COMMA=22, POINT=23, POW=24, PI=25, 
-		EULER=26, I=27, VARIABLE=28, NUMBER=29, WS=30, NEWLINE=31;
+		EULER=26, I=27, VARIABLE=28, NUMBER=29, WS=30;
 	public static final int
 		RULE_equation = 0, RULE_expression = 1, RULE_atom = 2;
 	private static String[] makeRuleNames() {
@@ -43,7 +43,7 @@ public class calculatorParser extends Parser {
 			null, "INT", "DOUBLE", "SCIENTIFIC_NUMBER", "COS", "SIN", "TAN", "ACOS", 
 			"ASIN", "ATAN", "LN", "LOG", "SQRT", "LPAREN", "RPAREN", "PLUS", "MINUS", 
 			"TIMES", "DIV", "GT", "LT", "EQ", "COMMA", "POINT", "POW", "PI", "EULER", 
-			"I", "VARIABLE", "NUMBER", "WS", "NEWLINE"
+			"I", "VARIABLE", "NUMBER", "WS"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -1070,7 +1070,7 @@ public class calculatorParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3!c\4\2\t\2\4\3\t\3"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3 c\4\2\t\2\4\3\t\3"+
 		"\4\4\t\4\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3\2\5\2\22\n\2\3\3\3\3\3\3\3"+
 		"\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3"+
 		"\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3"+

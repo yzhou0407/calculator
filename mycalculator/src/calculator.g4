@@ -40,21 +40,20 @@ expression
     |   expression op=('+'|'-') expression      # AddOrSub
     |   op=('+'|'-') atom                       # SignedAtom
     |   atom                                    # Atoms
-    |   COS'('expression')'		                # Cosine
-    |   TAN'('expression')'		                # Tangent
-    |   SIN'('expression')'		                # Sine
-    |   ACOS'('expression')'		            # ACosine
-    |   ATAN'('expression')'	                # ATangent
-    |   ASIN'('expression')'		            # ASine
+    |   COS'('expression')'                     # Cosine
+    |   TAN'('expression')'                     # Tangent
+    |   SIN'('expression')'                     # Sine
+    |   ACOS'('expression')'                    # ACosine
+    |   ATAN'('expression')'                    # ATangent
+    |   ASIN'('expression')'                    # ASine
     |   LOG'('expression',' expression')'       # Logarithm
     |   LN'('expression')'	                    # NaturalLogarithm
-    |   SQRT'('expression')'	                # SquareRoot
- // | I     #ConstantI
+    |   SQRT'('expression')'                    # SquareRoot
     ;
 
 atom
     :   INT                         # Integer
-    |   DOUBLE		                # Double
+    |   DOUBLE		                  # Double
     |   PI                          # ConstantPI
     |   EULER                       # ConstantE
     |   SCIENTIFIC_NUMBER           # Scientific
@@ -68,7 +67,7 @@ DOUBLE : [0-9]+'.'[0-9]+;
 
 
 SCIENTIFIC_NUMBER
-   : INT+ ((E1 | E2) SIGN? NUMBER)
+   : NUMBER ((E1 | E2) SIGN? NUMBER)
    ;
 
 COS
@@ -228,7 +227,3 @@ fragment SIGN
 WS
    : [ \r\n\t] + -> skip
    ;
-
-NEWLINE
-    : '\r'? '\n'
-    ;

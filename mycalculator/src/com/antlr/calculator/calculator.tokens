@@ -28,7 +28,6 @@ I=27
 VARIABLE=28
 NUMBER=29
 WS=30
-NEWLINE=31
 'cos'=4
 'sin'=5
 'tan'=6
